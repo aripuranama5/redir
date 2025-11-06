@@ -1,0 +1,19 @@
+{
+  "name": "aws-metadata-redirect",
+  "version": "1.0.0",
+  "description": "SSRF Demonstration - Redirect all requests to AWS metadata service",
+  "main": "aws-metadata-redirect.js",
+  "scripts": {
+    "start": "node aws-metadata-redirect.js",
+    "dev": "node aws-metadata-redirect.js"
+  },
+  "keywords": [
+    "ssrf",
+    "security",
+    "research",
+    "aws",
+    "metadata"
+  ],
+  "author": "Security Researcher",
+  "license": "MIT"
+}
